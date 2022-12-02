@@ -1,11 +1,5 @@
-.bg-dark {
-  background-color: #8e210b!important;
-}
-.navbar-brand{
-  margin-left: 15px!important;
-}
+
 .contenitore {
-  width: 50%;
   margin: auto;
 
   h2 {
@@ -16,4 +10,19 @@
   .paragrafo {
     background-color: greenyellow;
   }
+}
+
+
+.accettoSpento {
+  height: 60px;
+  text-align: left;
+  font-size: 10px;
+  background-color: gray;
+}
+
+.accettoAcceso {
+  height: 200px;
+  text-align: center;
+  font-size: 20px;
+  background-color: rgb(234, 176, 0);
 }

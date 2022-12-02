@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,6 +16,15 @@ export class AppComponent {
   telefono: number = 454667;
   accetto: boolean = false;
 
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+
+
+  clienti = ['danilo', 'alessio', 'marco', 'claudia'];
+
+
+  colore = "orange";
+
+  onChangeAccetto(){
+    this.accetto = !this.accetto;
+  }
 
 }
