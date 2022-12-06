@@ -10,8 +10,16 @@ export class RecipeService {
 
   constructor() { }
 
+  // con questo mdosdjsfjeokwe
   getRecipes(): Observable<Recipe[]> {
+
+    // qui uso l'of
     return of (RECIPES);
+  }
+
+  getRecipe(id: number): Observable<Recipe>{
+    const recipe = RECIPES.find(res => res._id == id);
+    return of (recipe);
   }
 
 

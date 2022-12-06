@@ -1,0 +1,25 @@
+<div *ngIf="ricetta">
+  <div class="container-image" [ngStyle]="{'background-image': 'url(' + ricetta.image + ')'}">
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <h2 class="title-summary">{{ricetta.title}}</h2>
+      <div class="col-auto description">
+        {{ricetta.description}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        Difficoltà: <img [src]="percorso + ricetta.difficulty + '.png'" class="difficolta">
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        Ricetta Pubblicata il {{ricetta.date}}
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.container-image {
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+.container-fluid {
+  padding: 20px;
+
+  .title-summary {
+    font-weight: 900
+  }
+
+  .description {
+    text-align: justify;
+    margin-bottom: 20px;
+    color: rgb(91, 91, 91);
+  }
+
+  .difficolta {
+    height: 35px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+   }
+}
+

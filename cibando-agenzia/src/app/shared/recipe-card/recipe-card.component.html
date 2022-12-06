@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="container-card col-sm-3 col-3" *ngFor="let recipe of recipes">
+      <div class="card">
+        <div class="image-bg card-img-top" [ngStyle]="{'background-image': 'url(' + recipe.image + ')'}" (click)="emettiTitolo(recipe.title)"></div>
+        <div class="card-body">
+          <h5 class="card-title">{{recipe.title}}</h5>
+          <p class="card-text">{{recipe.description | slice: 0:200}} ...</p>
+          <!-- <a class="btn btn-primary" routerLink="dettaglio/{{recipe.title}}/{{recipe._id}}">Visualizza</a> -->
+          <a class="btn btn-primary" [routerLink]="'dettaglio/' + recipe.title + '/' + recipe._id">Visualizza</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

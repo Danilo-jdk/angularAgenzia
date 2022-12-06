@@ -1,0 +1,4 @@
+<section>
+  <h2 *ngIf="pag != 'home'">Ecco le nostre ricette: <strong *ngIf="titoloRicetta">{{titoloRicetta}}</strong></h2>
+  <app-recipe-card [recipes]="ricette" (titoloRicetta)="catturaTitolo($event)"></app-recipe-card>
+</section>
