@@ -1,0 +1,21 @@
+.img-fluid {
+  max-width: 60%;
+  height: auto;
+}
+
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+
+input.ng-valid {
+  border: 2px solid rgb(60, 255, 0);
+}
+
+p.help.is-danger {
+  font-size: 12px;
+  color: red;
+  margin-bottom: -4px;
+  font-weight: bold;
+}

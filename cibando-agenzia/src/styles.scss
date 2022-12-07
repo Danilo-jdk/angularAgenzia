@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import '../node_modules/material-icons/iconfont/material-icons.scss';
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -9,6 +10,13 @@ footer {
   background: #8e210b!important;
   height: 100px;
   margin-top: 20px;
+}
+
+.material-icons {
+  position: relative;
+  top: -15px;
+  margin-right: 10px;
+  color: #8e210b;
 }
 
 
