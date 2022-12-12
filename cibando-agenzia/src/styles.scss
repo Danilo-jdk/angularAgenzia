@@ -19,6 +19,15 @@ footer {
   color: #8e210b;
 }
 
+.p-password {
+  display: block!important;
+}
+.p-inputtext {
+  width: 100%!important;
+}
+.p-password-input {
+  width: 100%!important;
+}
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
