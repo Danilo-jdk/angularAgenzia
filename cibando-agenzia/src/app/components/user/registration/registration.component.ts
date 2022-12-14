@@ -14,7 +14,7 @@ export class RegistrationComponent implements OnInit {
   registrazioneOk = false;
 
   form = new FormGroup({
-    nome: new FormControl('', [Validators.required]),
+    name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/)]),
     ripetiPassword: new FormControl('', [Validators.required]),
@@ -31,11 +31,21 @@ export class RegistrationComponent implements OnInit {
   onSubmit(){
     console.log(this.form.value)
     const user = {
-      nome: this.form.value.nome,
+      nome: this.form.value.name,
       email: this.form.value.email
     }
-    this.userService.datiUtente.next(user);
-    this.registrazioneOk = true;
+
+
+    this.userService.insertUser(this.form.value).subscribe({
+      next: (res) => {
+        this.userService.datiUtente.next(user);
+        this.registrazioneOk = true;
+        this.router.navigate(['home']);
+      },
+      error: (err) => {
+        console.log(err)
+      }
+    })
   }
 
 

@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { DetailComponent } from './components/recipes/detail/detail.component';
+import { AggiornaComponent } from './components/recipes/aggiorna/aggiorna.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'ricette', component: RecipesComponent, children: [
     { path: 'dettaglio/:title/:_id', component: DetailComponent},
+    { path: 'aggiorna/:_id', component: AggiornaComponent},
     { path: '', pathMatch: 'full', component: RecipesListComponent}
   ]},
   { path: 'registrazione', component: RegistrationComponent},

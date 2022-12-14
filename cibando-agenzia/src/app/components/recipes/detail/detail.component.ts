@@ -25,23 +25,23 @@ export class DetailComponent implements OnInit {
   }
 
 
-  onGetRecipe(): void {
-    const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));
+  // onGetRecipe(): void {
+  //   const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));
 
-    this.recipeService.getRecipe(id).subscribe({
-      next: (res) => {
-        this.ricetta = res;
-      },
-      error: (err) => {
-        console.log(err)
-      }
-    })
-  }
+  //   this.recipeService.getRecipe(id).subscribe({
+  //     next: (res) => {
+  //       this.ricetta = res;
+  //     },
+  //     error: (err) => {
+  //       console.log(err)
+  //     }
+  //   })
+  // }
 
 
   onGetRecipe2(){
     this.activatedRoute.params.subscribe((urlParams) => {
-      const id = Number(urlParams['_id']);
+      const id = urlParams['_id'];
           this.recipeService.getRecipe(id).subscribe({
             next: (res) => {
               this.ricetta = res;

@@ -1,0 +1,50 @@
+<form class="mx-1 mx-md-4" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="d-flex flex-row align-items-center mb-4">
+      <span class="material-icons">person</span>
+      <div class="form-outline flex-fill mb-0">
+        <label class="form-label" for="form3Example1c">Titolo:</label>
+        <input type="text" id="form3Example1c" class="form-control" formControlName="title" />
+
+      </div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center mb-4">
+      <span class="material-icons">description</span>
+      <div class="form-outline flex-fill mb-0">
+        <label class="form-label" for="form3Example3c">description:</label>
+        <textarea class="form-control" formControlName="description">
+        </textarea>
+      </div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center mb-4">
+      <span class="material-icons">lock</span>
+      <div class="form-outline flex-fill mb-0">
+        <label class="form-label" for="form3Example4c">Percorso Img</label>
+        <input type="text" id="image" class="form-control" formControlName="image" />
+
+      </div>
+    </div>
+
+    <div class="d-flex flex-row align-items-center mb-4">
+
+      <div class="form-outline flex-fill mb-0">
+        <span class="material-icons">key</span> <label class="form-label" for="form3Example4cd">Difficoltà</label>
+        <input type="text" id="form3Example1c" class="form-control" formControlName="difficulty" />
+      </div>
+    </div>
+
+    <div class="form-check d-flex justify-content-center mb-5">
+        <label class="form-label" for="form2Example3" style="width: 25%;">
+            Pubblicato
+          </label>
+      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" formControlName="published" />
+    </div>
+
+
+    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+      <button type="submit" class="btn btn-primary btn-lg" [disabled]="!form.valid">Modifica ricetta</button>
+    </div>
+
+  </form>

@@ -25,11 +25,11 @@ export class RecipesListComponent implements OnInit {
           // il next viene eseguito se tutto bene
           next: (res) => {
             this.ricette = res;
-            if(this.pag == 'home'){
-              this.ricette = this.ricette.sort((a,b) => a._id - b._id).reverse().slice(0,4);
-            } else {
-              this.ricette = this.ricette.sort((a,b) => a._id - b._id)
-            }
+            // if(this.pag == 'home'){
+            //   this.ricette = this.ricette.sort((a,b) => a._id - b._id).reverse().slice(0,4);
+            // } else {
+            //   this.ricette = this.ricette.sort((a,b) => a._id - b._id)
+            // }
           },
           error: (err) => {
             console.log(err)

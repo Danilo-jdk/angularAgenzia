@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordModule } from "primeng/password";
 import { DividerModule } from "primeng/divider";
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component'
 import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
+import { NuovaRicettaComponent } from './components/recipes/nuova-ricetta/nuova-ricetta.component';
+import { AggiornaComponent } from './components/recipes/aggiorna/aggiorna.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { RegistrationComponent } from './components/user/registration/registrati
     RecipeCardComponent,
     DetailComponent,
     RecipesListComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    NuovaRicettaComponent,
+    AggiornaComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { RegistrationComponent } from './components/user/registration/registrati
     FormsModule,
     ReactiveFormsModule,
     PasswordModule,
-    DividerModule
+    DividerModule,
+    HttpClientModule
 
   ],
   providers: [],
