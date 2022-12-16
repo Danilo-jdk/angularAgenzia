@@ -4,3 +4,20 @@
 .navbar-brand{
   margin-left: 15px!important;
 }
+
+.material-icons {
+  position: relative;
+  margin-left: 30px;
+  margin-right: 10px;
+  color: #ffffff;
+  margin-top: 25px;
+}
+.loggato {
+  width: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: 40px;
+}

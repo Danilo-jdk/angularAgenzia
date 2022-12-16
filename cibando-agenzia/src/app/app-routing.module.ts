@@ -1,3 +1,4 @@
+import { LoggedInGuard } from './logged-in.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -6,6 +7,8 @@ import { RecipesListComponent } from './components/recipes/recipes-list/recipes-
 import { DetailComponent } from './components/recipes/detail/detail.component';
 import { AggiornaComponent } from './components/recipes/aggiorna/aggiorna.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,6 +19,8 @@ const routes: Routes = [
     { path: '', pathMatch: 'full', component: RecipesListComponent}
   ]},
   { path: 'registrazione', component: RegistrationComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'profilo', component: ProfileComponent, canActivate: [LoggedInGuard]},
   { path: '**', redirectTo: 'home'}
 ];
 

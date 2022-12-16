@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordModule } from "primeng/password";
 import { DividerModule } from "primeng/divider";
 import { HttpClientModule } from '@angular/common/http';
+import { ToastModule } from 'primeng/toast';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,8 @@ import { RecipesListComponent } from './components/recipes/recipes-list/recipes-
 import { RegistrationComponent } from './components/user/registration/registration.component';
 import { NuovaRicettaComponent } from './components/recipes/nuova-ricetta/nuova-ricetta.component';
 import { AggiornaComponent } from './components/recipes/aggiorna/aggiorna.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,9 @@ import { AggiornaComponent } from './components/recipes/aggiorna/aggiorna.compon
     RecipesListComponent,
     RegistrationComponent,
     NuovaRicettaComponent,
-    AggiornaComponent
+    AggiornaComponent,
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -43,8 +49,9 @@ import { AggiornaComponent } from './components/recipes/aggiorna/aggiorna.compon
     ReactiveFormsModule,
     PasswordModule,
     DividerModule,
-    HttpClientModule
-
+    HttpClientModule,
+    ToastModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

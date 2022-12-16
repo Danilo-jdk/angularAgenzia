@@ -3,6 +3,7 @@ import { Recipe } from 'src/app/models/recipe.model';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import * as ClassicEditorBuild from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-aggiorna',
@@ -10,6 +11,44 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./aggiorna.component.scss']
 })
 export class AggiornaComponent implements OnInit {
+
+  Editor = ClassicEditorBuild;
+
+  editorConfig = {
+    toolbar: {
+        items: [
+            'bold',
+            '|',
+            'italic',
+            '|',
+            'link',
+            'bulletedList',
+            'numberedList',
+            '|',
+            'indent',
+            'outdent',
+            '|',
+            'undo',
+            'redo',
+        ]
+    },
+    image: {
+        toolbar: [
+            'imageStyle:full',
+            'imageStyle:side',
+            '|',
+            'imageTextAlternative'
+        ]
+    },
+    table: {
+        contentToolbar: [
+            'tableColumn',
+            'tableRow',
+            'mergeTableCells'
+        ]
+    },
+    height: 300,
+};
 
   id: string;
 

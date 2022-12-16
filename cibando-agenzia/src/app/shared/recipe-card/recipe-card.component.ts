@@ -10,9 +10,14 @@ export class RecipeCardComponent implements OnInit {
  @Input() recipes: Recipe[];
  @Output() titoloRicetta = new EventEmitter();
 
+ ruolo: any;
+
   constructor() { }
 
   ngOnInit(): void {
+    if(JSON.parse(localStorage.getItem('user')) != null){
+      this.ruolo = (JSON.parse(localStorage.getItem('user'))).role;
+    }
   }
 
   emettiTitolo(titolo){

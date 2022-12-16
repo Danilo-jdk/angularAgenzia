@@ -5,10 +5,13 @@
         <div class="image-bg card-img-top" [ngStyle]="{'background-image': 'url(' + recipe.image + ')'}" (click)="emettiTitolo(recipe.title)"></div>
         <div class="card-body">
           <h5 class="card-title">{{recipe.title}}</h5>
-          <p class="card-text">{{recipe.description | slice: 0:200}} ...</p>
+          <p class="card-text">
+            <span [innerHTML]="recipe.description | slice: 0:200"></span>...</p>
           <!-- <a class="btn btn-primary" routerLink="dettaglio/{{recipe.title}}/{{recipe._id}}">Visualizza</a> -->
-          <a class="btn btn-primary" [routerLink]="'/ricette/dettaglio/' + recipe.title + '/' + recipe._id">Visualizza</a>
-          <a class="btn btn-primary" [routerLink]="'/ricette/aggiorna/' + recipe._id">Modifica</a>
+          <div id="contBtn">
+            <a class="btn btn-primary" [routerLink]="'/ricette/dettaglio/' + recipe.title + '/' + recipe._id">Visualizza</a>
+            <a class="btn btn-primary" [routerLink]="'/ricette/aggiorna/' + recipe._id" *ngIf="ruolo == 'admin'">Modifica</a>
+          </div>
         </div>
       </div>
     </div>

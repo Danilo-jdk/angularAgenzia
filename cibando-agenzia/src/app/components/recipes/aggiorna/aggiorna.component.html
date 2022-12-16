@@ -13,8 +13,7 @@
       <span class="material-icons">description</span>
       <div class="form-outline flex-fill mb-0">
         <label class="form-label" for="form3Example3c">description:</label>
-        <textarea class="form-control" formControlName="description">
-        </textarea>
+        <ckeditor [config]="editorConfig" [editor]="Editor" formControlName="description"></ckeditor>
       </div>
     </div>
 

@@ -17,4 +17,10 @@ export class UserService {
    return this.http.post<any>(`${this.apiBaseUrl}/signup`, form);
   }
 
+  getUser(email: string): Observable<string>{
+    const user = {
+      email: email
+    }
+    return this.http.post<any>(`${this.apiBaseUrl}/user`, user);
+  }
 }

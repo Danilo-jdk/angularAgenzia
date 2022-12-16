@@ -7,3 +7,9 @@
 .container-card {
   margin-bottom: 20px;
 }
+
+div#contBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
